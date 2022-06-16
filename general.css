@@ -236,9 +236,7 @@ body{
     display: flex;
     gap: 1.6rem;
 }
-.tags-list a{
-    border-radius: 5rem;
-}
+
 .tag-item{
     padding: 0.6rem 1.2rem;
     background-color: #f1f3f5;
@@ -253,6 +251,6 @@ body{
     background-color: red;
 }
 .active-item{
-    background-color: red;
+    background-color: #444;
     color:#fff;
 }
