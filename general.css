@@ -253,6 +253,6 @@ body{
     background-color: red;
 }
 .active-item{
-    background-color: #444;
+    background-color: red;
     color:#fff;
 }
