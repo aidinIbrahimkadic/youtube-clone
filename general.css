@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    color:#212529;
+    font-family: 'Roboto', sans-serif;
+}
+/* ********************** */
+/* HEADER */
+/* ********************** */
+
+.header{
+    display: flex;
+    height:7vh;
+    justify-content: space-between;
+    padding: 1.2rem 3.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* border-bottom: solid 1px #f1f3f5; */
+}
+.btn{
+    border: none;
+    font-weight: 100;
+}
+.btn-primary{
+    background-color: #fff;
+    font-size: 3.2rem;
+}
+.btn-search{
+    height: 4rem;
+    width: 6.4rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border: solid 0.5px #dee2e6;
+    font-size: 2.2rem;
+}
+.menu-left img{
+    width:8.2rem;
+    margin-left: 2.8rem;
+}
+.menu-left, .menu-right{
+width:20rem;
+}
+.menu-central{
+    display: flex;
+    height:3.8rem;
+    align-items: center;
+}
+.menu-input{
+    width: 55rem;
+    height: 4rem;
+    border: solid 0.5px #dee2e6;
+    font-size: 1.6rem;
+    padding-left: 1.2rem ;
+    z-index: 9999;
+}
+.menu-input:focus{
+    outline:1px solid #1864ab;
+
+}
+.menu-input::placeholder{
+    color:#adb5bd ;
+
+}
+
+.mic{
+    font-size: 2.2rem;
+    margin-left: 2.2rem;
+    background-color: #f8f9fa;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: relative;
+    border-left: none;
+    cursor: pointer;
+}
+.ph-microphone{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.menu-list{
+    display: flex;
+    gap:2.2rem;
+    align-items: center;
+
+}
+.list-item{
+    font-size: 2.4rem;
+}
+
+.list-item img{
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    margin-left: 1.6rem;
+}
+
+.flex{
+    display:flex;
+    gap:1.2rem;
+    max-width:100%;
+}
+main{
+    max-width: 88%;
+
+}
+.main{
+    background-color: #f8f9fa;
+}
+/* ********************** */
+/* Navigation */
+/* ********************** */
+.navigation{
+    padding: 0 1.2rem 0 0;
+    min-width: 12%;
+    height: 93vh;
+    font-size: 1.4rem;
+    overflow-y: hidden;
+    transition: all .2s;
+}
+.navigation:hover{
+    overflow-y: scroll;
+}
+/* SCROLLBAR */
+.navigation::-webkit-scrollbar {
+    width: 0.8rem;
+    opacity: 0;
+  }
+.navigation::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+  }
+   
+.navigation::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a;
+    outline: 0.2px solid  #f1f3f5;
+    border-radius: 10px
+  }
+
+
+a:link, a:visited{
+    text-decoration: none;
+    color: #0e0f0f;
+}
+li{
+    list-style: none;
+}
+
+h3{
+    color:#868e96;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    padding-top: 1.2rem;
+    padding-left: 3.2rem;
+}
+
+.navigation .nav-list-box:not(:last-child){
+    border-bottom: solid 0.4px rgba(117, 117, 117, 0.5);
+}
+.nav-list-box li{
+    padding: 1rem  3.2rem;
+}
+.icon{
+    font-size:2.8rem;
+    position: relative;
+}
+.new-content::after{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 30px;
+    z-index: 99999;
+    background-color: blue;
+
+}
+.nav-list-box li{
+    display: flex;
+
+    align-items: center;
+    gap:1.8rem;
+}
+.nav-list-box li:hover{
+    background-color: #f1f3f5;
+}
+.nav-list-box a:focus li{
+    background-color: #bbb;
+    font-weight: 600;
+}
+
+.nav-list-box img{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+.nav-list-box ul{
+    margin: 1.2rem 0
+}
+.nav-links, .other-links{
+    padding: 1rem 3.2rem 0 3.2rem;
+}
+.nav-links a:link,.other-links a:link{
+    color:#495057;
+}
+.copyright{
+    display: block;
+    color:#868e96;
+    padding: 2.2rem 3.2rem;
+}
+.nav-list-box a:focus .icon {
+    font-weight: 700;
+}
+/* ********************** */
+/* Tags */
+/* ********************** */
+body{
+    overflow: hidden;
+}
+.tags-box{
+    padding: 1.2rem 3.4rem;
+    max-width: 100%;
+    border-top: .5px solid rgba(221, 221, 221, 0.5);
+    border-bottom: .5px solid rgba(221, 221, 221, 0.5);
+    overflow-x:scroll;
+
+}
+.tags-list{
+    display: flex;
+    gap: 1.6rem;
+}
+.tag-item{
+    padding: 0.6rem 1.2rem;
+    background-color: #f1f3f5;
+    white-space: nowrap;
+    border: 1px solid #ddd;
+    border-radius: 5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.tag-item :not(.active-item){
+    background-color: red;
+}
+.active-item{
+    background-color: #444;
+    color:#fff;
+}
