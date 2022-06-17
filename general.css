@@ -230,11 +230,12 @@ body{
     border-top: .5px solid rgba(221, 221, 221, 0.5);
     border-bottom: .5px solid rgba(221, 221, 221, 0.5);
     overflow-x:scroll;
+    transition: all .2s;
 
 }
 .tags-list{
     display: flex;
-    gap: 1.6rem;
+    gap: 1.4rem;
 }
 
 .tag-item{
@@ -247,10 +248,19 @@ body{
     font-size: 1.4rem;
 }
 
-.tag-item :not(.active-item){
+/* .tag-item :not(.active-item){
     background-color: red;
-}
+} */
 .active-item{
     background-color: #444;
     color:#fff;
+}
+.active-tags{
+    cursor: grabbing;
+}
+.active-tags .tag-item{
+    cursor: grabbing;
+}
+.tags-box::-webkit-scrollbar {
+display: none;
 }
