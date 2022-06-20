@@ -56,8 +56,11 @@ const tagList = document.querySelector('.tags-list').addEventListener('click',(e
  * DRAG scroll
  */
 let isDown = false;
- let startX;
- let scrollLeft;
+let startX ;
+let scrollLeft;
+let scrDown=0;
+let scrUp=0;
+
 
 const slider = document.querySelector('.tags-box');
     
@@ -65,25 +68,29 @@ slider.addEventListener('mousedown',(e)=>{
     isDown = true;
     slider.classList.add('active-tags');
     
-    startX = e.pageX - slider.offsetLeft;
+    startX = e.pageX - slider.offsetLeft+ (scrDown-scrUp);
     scrollLeft = slider.offsetLeft;
-    // console.log(startX, scrollLeft);
+    scrDown += e.screenX
+
 })
-slider.addEventListener('mouseleave',()=>{
+slider.addEventListener('mouseleave',(e)=>{
+    isDown = false;
+    slider.classList.remove('active-tags');
+})
+slider.addEventListener('mouseup',(e)=>{
     isDown = false;
     slider.classList.remove('active-tags');
 
-})
-slider.addEventListener('mouseup',()=>{
-    isDown = false;
-    slider.classList.remove('active-tags');
+    const x = e.pageX - slider.offsetLeft+(scrDown-scrUp);
+    scrUp += e.screenX;
+
+     walk = x - startX;
+
 })
 slider.addEventListener('mousemove',(e)=>{
     if(!isDown) return;
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
-    const walk = x - startX;
+     walk = x - startX;
     slider.scrollLeft = -walk;
-    // console.log(x,startX, walk);
 })
-console.log(slider);
